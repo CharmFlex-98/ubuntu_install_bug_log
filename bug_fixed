@@ -1,0 +1,2 @@
+BUG -- ubuntu booted on purple screen and hang forever, sometimes can boot successfully, but most of the time cannot.
+FIXED -- in my case, this is problem of Intel microcode updates on ASUS. go to etc/default/grub and change to this "dis_ucode_ldr quiet splash". PRoblem solved.
