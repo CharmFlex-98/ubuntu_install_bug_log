@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+
+gnome-terminal -- bash -c "
+
+echo running...;
+
+export WORKON_HOME=/home/jiaming/.virtualenvs;
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3;
+source /usr/local/bin/virtualenvwrapper.sh;
+
+workon cv; 
+python ~/PycharmProjects/Project_with_OpenCV_CUDA/robot_car/server.py;
+
+"
+gnome-terminal -- bash -c "
+
+sleep 2;
+echo connecting to raspberry pi...;
+
+sshpass -p "2506980106ming" ssh -o StrictHostKeyChecking=no pi@192.168.0.22;
+
+"

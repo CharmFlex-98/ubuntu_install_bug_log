@@ -1,0 +1,12 @@
+echo Do you want to run robotcar server?(y/n)
+read answer
+
+if [ $answer = y ];then
+   ./robotcar_server.sh
+elif [ $answer = n ];then
+   echo Discard any launching! Quitting...
+else
+   echo this will re-launch terminal bash script
+   exec bash  
+fi
+
